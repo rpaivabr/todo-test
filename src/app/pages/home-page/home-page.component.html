@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <h1>{{ pageTitle }}</h1>
+
+  <app-nova-tarefa
+    (novaTarefa)="listaTarefasService.adicionar($event)"
+  ></app-nova-tarefa>
+
+  <app-lista-tarefas
+    [lista]="listaTarefasService.lista"
+    (atualizarItem)="listaTarefasService.atualizar($event)"
+  ></app-lista-tarefas>
+</div>
