@@ -17,6 +17,8 @@ export class NovaTarefaComponent implements OnInit {
   }
 
   adicionar(el: HTMLInputElement): void {
+    if (!el.value) return;
+
     this.novaTarefa.emit(el.value);
   }
 
