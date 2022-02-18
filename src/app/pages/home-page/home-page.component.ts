@@ -14,4 +14,9 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  adicionar(descricao: string): void {
+    this.listaTarefasService.adicionar(descricao);
+  }
+
+
 }
