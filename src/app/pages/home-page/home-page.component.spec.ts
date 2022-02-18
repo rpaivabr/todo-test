@@ -1,4 +1,7 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ListaTarefasComponent } from 'src/app/components/lista-tarefas/lista-tarefas.component';
+import { NovaTarefaComponent } from 'src/app/components/nova-tarefa/nova-tarefa.component';
 
 import { HomePageComponent } from './home-page.component';
 
@@ -8,7 +11,12 @@ describe('HomePageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomePageComponent ]
+      declarations: [
+        HomePageComponent,
+        ListaTarefasComponent,
+        NovaTarefaComponent,
+      ],
+      imports: [HttpClientModule]
     })
     .compileComponents();
   });
