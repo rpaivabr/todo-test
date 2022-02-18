@@ -1,0 +1,7 @@
+  <div class="list">
+    <app-tarefa
+      *ngFor="let item of lista"
+      [tarefa]="item"
+      (mudarStatus)="atualizar($event)"
+    ></app-tarefa>
+</div>
